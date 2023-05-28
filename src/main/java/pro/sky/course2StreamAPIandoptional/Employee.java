@@ -1,5 +1,7 @@
 package pro.sky.course2StreamAPIandoptional;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Employee {
     private final String firstName;
     private final String lastName;
@@ -7,8 +9,8 @@ public class Employee {
     private final int salary;
 
     public Employee(String firstName,String lastName, int department, int salary){
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstName = StringUtils.capitalize(firstName.toLowerCase());
+        this.lastName = StringUtils.capitalize(lastName.toLowerCase());
         this.department = department;
         this.salary = salary;
     }
